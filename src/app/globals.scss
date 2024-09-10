@@ -1,0 +1,54 @@
+/* src/styles/globals.scss */
+@import '../styles/themes.scss';
+
+:root,
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-family);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.image-container {
+  position: relative;
+  width: 10rem;
+  height: auto;
+}
+.custom-image {
+  object-fit: contain; 
+  display: block; 
+}
+
+@media (min-width: 768px) { /* Ajustes para pantallas medianas y mayores */
+  .image-container {
+    width: 150px; /* Ancho específico para pantallas medianas y mayores */
+    height: 760px; /* Altura específica para pantallas medianas y mayores */
+  }
+  
+  .custom-image {
+    display: block; /* Muestra la imagen en pantallas medianas y mayores */
+  }
+}
+
+@media (max-width: 767px) { /* Ajustes para pantallas pequeñas */
+  .custom-image {
+    display: none; /* Oculta la imagen en pantallas pequeñas */
+  }
+}

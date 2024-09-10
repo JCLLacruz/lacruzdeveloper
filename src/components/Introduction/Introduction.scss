@@ -1,0 +1,27 @@
+@import '../../styles/themes.scss';
+#introduction {
+	#header-title {
+		display: flex;
+		align-items: flex-end;
+		color: var(--color-text);
+		font-family: var(--font-family);
+		padding: var(--spacing-md) var(--spacing-lg);
+		background-color: var(--color-bg);
+		h1 {
+			display: inline-flex;
+			font-size: var(--header-text-size-md);
+			margin: 0;
+			span {
+				vertical-align: super;
+				font-size: var(--header-text-size-sm);
+				margin: 0;
+			}
+		}
+	}
+	#subtitle {
+        padding: var(--spacing-md) var(--spacing-lg);
+		h2 {
+			font-size: var(--header-text-size-xs);
+		}
+	}
+}
