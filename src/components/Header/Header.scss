@@ -1,21 +1,30 @@
-@import '../../styles/themes.scss';
-
 #header {
+	z-index: 1;
 	display: flex;
     width: 100vw;
+	height: auto;
 	align-items: flex-end;
-	justify-content: flex-end;
+	justify-content: space-between;
+	background-color: var(--color-bg);
 	a {
 		text-decoration: none;
 		color: var(--color-text);
+	}
+	@media (min-width: 480px) {
+		flex-direction: column;
+	}
+	#header-logo-container{
+		position: absolute;
+		left: 0;
+		width: 20rem;
+		// height: 5rem;
 	}
 	#header-buttons {
 		display: flex;
 		gap: var(--spacing-lg);
 		align-items: center;
 		padding: var(--spacing-md) var(--spacing-lg);
-		background-color: var(--color-bg);
-        margin-right: 20%;
+        margin-right: 2rem;
 	}
 }
 

@@ -1,0 +1,22 @@
+  @import '../../../styles/themes.scss';
+  
+.button{
+  z-index: 2;
+}
+  .button-header {
+    background-color: var(--color-bg); /* Background color from the theme */
+    border: none; /* Remove default border */
+    border-bottom: 2px solid var(--color-border); /* 2px solid black border only at the bottom */
+    padding: var(--spacing-md) var(--spacing-lg); /* Example padding, adjust as needed */
+    font-family: var(--font-family); /* Use the defined font family */
+    font-size: var(--font-size-base); /* Use the defined font size */
+    color: var(--color-text); /* Text color from the theme */
+    cursor: pointer; /* Change cursor to pointer */
+    text-align: center; /* Center text */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    
+    /* Optional: Add hover effect */
+    &:hover {
+      background-color: var(--color-hover); /* Change background color on hover */
+    }
+  }

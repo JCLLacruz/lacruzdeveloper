@@ -1,0 +1,22 @@
+@import '../styles/themes.scss';
+
+.backgroundLorem-container {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  background-color: var(--color-bg);
+  overflow: hidden;
+  font-family: var(--font-family);
+  z-index: -100;
+}
+
+.word {
+  position: absolute;
+  z-index: -100;
+  font-size: 3rem;
+  color: var(--color-text);
+  opacity: 0.1; /* Baja opacidad */
+  transform: translate(-50%, -50%);
+}

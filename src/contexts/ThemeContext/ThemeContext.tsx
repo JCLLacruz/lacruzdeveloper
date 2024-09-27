@@ -1,7 +1,8 @@
 // src/contexts/ThemeContext/ThemeContext.tsx
 'use client'
 
-import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
+
+import React, { createContext, useContext, ReactNode, useEffect, useState } from 'react';
 import { applyTheme, getInitialTheme } from './themeService';
 
 interface ThemeContextType {

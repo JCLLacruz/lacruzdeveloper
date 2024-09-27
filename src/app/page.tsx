@@ -1,9 +1,9 @@
-import Introduction from "@/components/Introduction/Introduction";
+import Logo from "@/components/Logo/Logo";
 
 export default function Home() {
 	return (
 		<main>
-			<Introduction/>
+			<Logo/>
 		</main>
 	);
 }
