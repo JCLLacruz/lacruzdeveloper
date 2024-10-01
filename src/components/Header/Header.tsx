@@ -5,7 +5,6 @@ import './Header.scss';
 import Logo from '../Logo/Logo';
 import Link from 'next/link';
 import { ToggleButton } from '../Buttons/ToggleButton/ToggleButton';
-import { useTheme } from '@/contexts/ThemeContext/ThemeContext';
 
 const links: LinkInterface[] = [
 	{ name: 'Inicio', href: '/' },
@@ -21,8 +20,10 @@ const Header: FC = () => {
 					<Logo subtitle={false} />
 				</Link>
 			</div>
-			<div id='header-buttons'>
+			<div className='icons-toggle-button'>
 				<ToggleButton handleToggle={'setDarkLigthTheme'} />
+			</div>
+			<div id='header-buttons'>
 				{links.map((link) => (
 					<Button key={link.name} content={link.name} children={undefined} className={'button-header'} hRef={link.href} />
 				))}

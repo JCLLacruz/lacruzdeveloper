@@ -1,6 +1,7 @@
 'use client';
 import React, { use, useContext, useEffect, useState } from 'react';
-import { useTheme } from '../../../contexts/ThemeContext/ThemeContext'; 
+import { useTheme } from '../../../contexts/ThemeContext/ThemeContext';
+import { FiSun, FiMoon} from 'react-icons/fi';
 import './ToggleButton.scss';
 
 interface ToggleButtonProps {
@@ -30,6 +31,7 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
 	const setDarkLigthTheme = () => {
 		setTheme(isActive ? 'light' : 'dark');
 	};
+
 	let toMake;
 	switch (true) {
 		case handleToggle === 'setDarkLigthTheme':
@@ -41,32 +43,40 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
 			break;
 	}
 	return (
-		<div className='toggle-button'
-			onClick={toMake}
-			style={{
-				width,
-				height,
-				backgroundColor: isActive ? activeBackgroundColor : inactiveBackgroundColor,
-				borderRadius,
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: isActive ? 'flex-end' : 'flex-start',
-				padding: '2px',
-				cursor: 'pointer',
-				transition: 'background-color 0.3s ease, justify-content 0.3s ease',
-			}}
-		>
+		<div id='toggle-button-container'>
+			{handleToggle === 'setDarkLigthTheme' && (
+				<>
+				{!isActive ? <FiSun size={20} color={'black'} /> : <FiMoon size={20} color={'white'} />}
+				</>
+			)}
 			<div
+				className='toggle-button'
+				onClick={toMake}
 				style={{
-					width: toggleSize,
-					height: toggleSize,
-					backgroundColor: toggleColor,
-					borderRadius: '50%',
-					transition: 'transform 0.3s ease',
-					boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
+					width,
+					height,
+					backgroundColor: isActive ? activeBackgroundColor : inactiveBackgroundColor,
+					borderRadius,
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: isActive ? 'flex-end' : 'flex-start',
+					padding: '2px',
+					cursor: 'pointer',
+					transition: 'background-color 0.3s ease, justify-content 0.3s ease',
 				}}
-			/>
-            
+			>
+				<div></div>
+				<div
+					style={{
+						width: toggleSize,
+						height: toggleSize,
+						backgroundColor: toggleColor,
+						borderRadius: '50%',
+						transition: 'transform 0.3s ease',
+						boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
+					}}
+				/>
+			</div>
 		</div>
 	);
 };

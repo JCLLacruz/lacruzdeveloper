@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
-
+@import './ui/scrollbar.scss';
 /* Tema Claro */
 :root {
-    --color-bg: #ffffff;
+    --color-bg: #ffffffd0;
     --color-text: #000000;
+    --color-text-secondary: #49c94b;
     --color-primary: #1d4ed8;
     --color-secondary: #fbbf24;
-    --color-border: #45c435;
+    --color-border: #35c499;
     --color-link: #3b82f6;
     --color-hover: #25eb99;
-    --color-scrollbar-thumb: #31b643;
-    --color-scrollbar-hover: #39f352;
+    --color-scrollbar-thumb: #35c499;
+    --color-scrollbar-hover: #25eb99;
     --color-scrollbar-track: #7bc285;
     --font-family: "M PLUS 1 Code", monospace;
     --font-size-base: 16px;
@@ -28,15 +29,16 @@
   /* Tema Oscuro */
   .dark {
     --color-bg: #111827;
-    --color-text: #ffffff;
+    --color-text: #ffffffd0;
+    --color-text-secondary: #3c81cc;
     --color-primary: #3b82f6;
     --color-secondary: #fcd34d;
     --color-border: #374151;
     --color-link: #60a5fa;
     --color-hover: #1d4ed8;
-    --color-scrollbar-thumb: #31b643;
-    --color-scrollbar-hover: #39f352;
-    --color-scrollbar-track: #7bc285;
+    --color-scrollbar-thumb: #374151;
+    --color-scrollbar-hover: #0b64f4;
+    --color-scrollbar-track: #34455f;
     --font-family: "M PLUS 1 Code", monospace;
     --font-size-base: 16px;
     --font-size-lg: 18px;

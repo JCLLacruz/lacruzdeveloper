@@ -4,10 +4,18 @@
 :root,
 html,
 body {
+  height: 100vh;
 	margin: 0;
 	padding: 0;
-	font-family: var(--font-family);
   background-color: var(--color-bg);
+	font-family: var(--font-family);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
 *,
@@ -23,8 +31,27 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  width: auto;
+  background-color: transparent;
+  margin: 0;
 	padding: 0;
+  color: var(--color-text)
+}
+p{
+  margin:1rem 0;
+  font-size: var(--body-text-size-md);
+  line-height: 1.25rem;
+  font-weight: 400;
+  word-spacing: 0.20rem;
+  letter-spacing: 0.08rem;
+}
+strong{
+  color: var(--color-text-secondary);
+  a {
+    color: var(--color-text-secondary);
+  }
 }
 
 .image-container {
